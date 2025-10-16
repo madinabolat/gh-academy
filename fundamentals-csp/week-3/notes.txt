@@ -1,0 +1,5 @@
+in terminal: 
+open -a TextEdit ~/.zshrc
+
+in the file: ~/Desktop/test.sh
+because made it executable (chmod +x ,/script.sh)
