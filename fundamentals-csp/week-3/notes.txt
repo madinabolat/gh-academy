@@ -9,3 +9,8 @@ in the file add: ~/Desktop/test.sh
 you made it executable, so we can just add ~/Desktop/test.sh
 ~ -> the directory Users/madinabolat
 
+github: 
+git add . -> adds all changes in the current directory and below (adds to staging)
+git commit -m "message" -> commit to local repo 
+git push -> push to github cloud
+git log -> shows commits history
