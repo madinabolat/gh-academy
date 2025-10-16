@@ -1,5 +1,11 @@
-in terminal: 
-open -a TextEdit ~/.zshrc
+bash file: test.sh
+run sh test.sh
+to make executable: chmod +x ./test.sh (should be in the same directory)
+then can just do ./test.sh
 
-in the file: ~/Desktop/test.sh
-because made it executable (chmod +x ,/script.sh)
+to run each time you open terminal
+open -a TextEdit ~/.zshrc
+in the file add: ~/Desktop/test.sh
+you made it executable, so we can just add ~/Desktop/test.sh
+~ -> the directory Users/madinabolat
+
