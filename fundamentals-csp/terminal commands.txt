@@ -1,0 +1,7 @@
+- copy a file: 
+cp week_2_project_tip_calculator.py ./week_4_tip_calculator.py 
+cp file_name.txt directory/renamed_file.txt
+
+-move a file: 
+mv source_file folder
+mv pushToGithub.sh ../ (move to parent folder)
