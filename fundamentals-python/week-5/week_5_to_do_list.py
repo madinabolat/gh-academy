@@ -22,6 +22,9 @@ def view_tasks(tasks):
     for task in tasks:
         print("%d: %s" %(tasks.index(task), task))
 
+
+
+#introduce one function: 
 print("Welcome to your task manager!")
 tasks=[]
 while True:
