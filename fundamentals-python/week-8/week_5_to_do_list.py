@@ -24,6 +24,7 @@ def delete_task():
     n = int(input())
     delete_line_from_file(tasks[n],filepath)
     tasks.pop(n)
+#add exceptions
 
 def view_tasks(tasks):
     for task in tasks:
