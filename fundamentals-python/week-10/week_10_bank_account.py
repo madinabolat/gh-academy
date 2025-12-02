@@ -9,6 +9,8 @@ class BankAccount:
         self.owner_name = owner_name
         self.balance = balance
     def deposit(self, amount):
+        #if amount < 0 or non-numeric
+
         self.balance += float(amount)
         print("You deposited $%.2f." % amount)
     def withdraw(self, amount):
@@ -24,7 +26,13 @@ class BankAccount:
 
 my_bank_account = BankAccount("Madina", 100000)
 my_bank_account.display_balance()
-my_bank_account.deposit(25000)
+result1 = my_bank_account.deposit(25000)
+print(result1)
 my_bank_account.display_balance()
-my_bank_account.withdraw(130000)
+result = my_bank_account.withdraw(130000)
+print(result)
 my_bank_account.display_balance()
+
+
+#what if enters negative amount
+#what if enters non numeric value
