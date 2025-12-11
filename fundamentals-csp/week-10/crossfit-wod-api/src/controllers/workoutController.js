@@ -11,7 +11,10 @@ const getOneWorkout = (req, res) => {
 };
 
 const createNewWorkout = (req, res) => {
-    // const workoutInfo = req.body();
+    const {body} = req;
+    
+
+    
     const createdWorkout = workoutService.createNewWorkout(workoutInfo);
     res.send("Create a new workout");
 };
