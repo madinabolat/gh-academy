@@ -4,9 +4,9 @@ const getAllWorkouts = () => {
     return DB.workouts;
 }
 
-const createNewWorkout = (workoutInfo) => {
+const createNewWorkout = (body) => {
     // DB.push(workoutInfo);
-    // return;
+    return;
 }
 
 

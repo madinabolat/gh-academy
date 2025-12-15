@@ -5,7 +5,7 @@ const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); //will be able to receive the json data inside controllers under req.body
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
