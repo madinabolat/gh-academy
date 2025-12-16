@@ -9,15 +9,34 @@ class BankAccount:
         self.owner_name = owner_name
         self.balance = balance
     def deposit(self, amount):
-        #if amount < 0 or non-numeric
+        try: 
+            amount = float(amount)
+        except ValueError:
+            print("the value should be numeric.")
+            return
 
-        self.balance += float(amount)
+        if amount <=0:
+            print("The deposit should be positive")
+            return
+
+        self.balance += amount
         print("You deposited $%.2f." % amount)
     def withdraw(self, amount):
+        try: 
+            amount = float(amount)
+        except ValueError:
+            print("the value should be numeric.")
+            return
+
+        if amount <=0:
+            print("The deposit should be positive")
+            return
+
+
         if amount > self.balance:
             print("Insufficient funds.")
             return
-        self.balance -= float(amount)
+        self.balance -= amount
         print("You withdrew $%.2f" % amount)
 
     def display_balance(self):
@@ -26,7 +45,7 @@ class BankAccount:
 
 my_bank_account = BankAccount("Madina", 100000)
 my_bank_account.display_balance()
-result1 = my_bank_account.deposit(25000)
+result1 = my_bank_account.deposit("hi")
 print(result1)
 my_bank_account.display_balance()
 result = my_bank_account.withdraw(130000)
