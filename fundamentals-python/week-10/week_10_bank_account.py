@@ -19,7 +19,8 @@ class BankAccount:
         if amount <=0:
             print("The value should be positive.")
             return None
-        
+        return amount
+    
     def deposit(self, amount):
         amount = self.validate_amount(amount)
         if amount == None: 
