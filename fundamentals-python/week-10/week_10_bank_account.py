@@ -8,31 +8,29 @@ class BankAccount:
     def __init__(self, owner_name, balance):
         self.owner_name = owner_name
         self.balance = balance
-    def deposit(self, amount):
+    
+    def validate_amount(self, amount): 
         try: 
             amount = float(amount)
         except ValueError:
-            print("the value should be numeric.")
-            return
+            print("The value should be numeric.")
+            return None
 
         if amount <=0:
-            print("The deposit should be positive")
+            print("The value should be positive.")
+            return None
+        
+    def deposit(self, amount):
+        amount = self.validate_amount(amount)
+        if amount == None: 
             return
-
         self.balance += amount
         print("You deposited $%.2f." % amount)
+
     def withdraw(self, amount):
-        try: 
-            amount = float(amount)
-        except ValueError:
-            print("the value should be numeric.")
+        amount = self.validate_amount(amount)
+        if amount == None: 
             return
-
-        if amount <=0:
-            print("The deposit should be positive")
-            return
-
-
         if amount > self.balance:
             print("Insufficient funds.")
             return
@@ -45,13 +43,9 @@ class BankAccount:
 
 my_bank_account = BankAccount("Madina", 100000)
 my_bank_account.display_balance()
-result1 = my_bank_account.deposit("hi")
+result1 = my_bank_account.deposit(100000)
 print(result1)
 my_bank_account.display_balance()
 result = my_bank_account.withdraw(130000)
 print(result)
 my_bank_account.display_balance()
-
-
-#what if enters negative amount
-#what if enters non numeric value
