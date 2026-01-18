@@ -24,9 +24,25 @@ public class lc_121_BestTimeToBuyAndSellStock {
             return profit;
         }
 
+    public static int maxProfitAlt(int[] prices){
+            int n = prices.length;
+            int max_profit = 0;
+            int cheapest_price_to_buy_before_day_i = prices[0];
+            for (int i = 1; i<n; i++){
+                int profit = prices[i]-cheapest_price_to_buy_before_day_i;
+                if (profit > max_profit){
+                    max_profit = profit;
+                }
+                if (prices[i]<cheapest_price_to_buy_before_day_i){
+                    cheapest_price_to_buy_before_day_i = prices[i];
+                }
+            }
+            return max_profit;
+    }
+
     public static void main(String[] args) {
         int[] prices = new int[]{7,1,5,3,6,4};
-        System.out.println(maxProfitBruteForce(prices));
+        System.out.println(maxProfitAlt(prices));
     }
 
 }

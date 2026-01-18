@@ -17,8 +17,8 @@ public class lc_136_SingleNumber {
     public static void main(String[] args) {
         int[] nums1 = {2,2,1};
         int[] nums2 = {4,1,2,1,2};
-        System.out.println(singleNumber(nums1));
-        System.out.println(singleNumber(nums2));
+//        System.out.println(singleNumber(nums1));
+//        System.out.println(singleNumber(nums2));
 
 
     }
