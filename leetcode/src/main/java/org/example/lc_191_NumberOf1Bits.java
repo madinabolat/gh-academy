@@ -2,6 +2,8 @@ package org.example;
 
 public class lc_191_NumberOf1Bits {
     public static int hammingWeight(int n){
+        //last bit
+        // divide by 2, check last bit
         return 0;
     }
 
